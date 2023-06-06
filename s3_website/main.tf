@@ -23,7 +23,7 @@ resource "aws_s3_bucket_acl" "example_acl" {
  acl = "public-read"
 }
 resource "aws_s3_bucket_website_configuration" "website_config" {
- bucket = aws_s3_bucket.myterraformche.id
+ bucket = aws_s3_bucket.website.id
  index_document {
  suffix = "index.html"
  }
