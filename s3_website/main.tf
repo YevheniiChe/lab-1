@@ -18,7 +18,7 @@ resource "aws_s3_bucket" "website" {
  Environment = "Dev"
  }
 }
-resource "aws_s3_bucket_acl" "example_acl" {
+resource "aws_s3_bucket_acl" "example" {
  bucket = aws_s3_bucket.website.id
  acl = "public-read"
 }
