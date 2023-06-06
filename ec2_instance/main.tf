@@ -40,7 +40,7 @@ resource "aws_instance" "web" {
 }
 # Security group
 resource "aws_security_group" "web_sg" {
- name = "Ec2 instance sg"
+ name = "Ec2 instance2 sg"
  ingress {
  from_port = 80
  to_port = 80
