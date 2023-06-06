@@ -22,8 +22,16 @@ resource "aws_s3_bucket_acl" "example_acl" {
  bucket = aws_s3_bucket.website.id
  acl = "public-read"
 }
+resource "aws_s3_bucket_public_access_block" "example_acl" {
+  bucket = aws_s3_bucket.website.id
+
+  block_public_acls       = false
+  block_public_policy     = false
+  ignore_public_acls      = false
+  restrict_public_buckets = false
+}
 resource "aws_s3_bucket_website_configuration" "website_config" {
- bucket = aws_s3_bucket.website.id
+ bucket = aws_s3_bucket.myterraformche.id
  index_document {
  suffix = "index.html"
  }
