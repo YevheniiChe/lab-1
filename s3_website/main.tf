@@ -9,9 +9,6 @@ terraform {
 # Configure AWS provider and creds
 provider "aws" {
  region = "us-east-1"
- shared_config_files = ["C:/LKM/.aws/config"]
- shared_credentials_files = ["C:/LKM/.aws/credentials"]
- profile = "default"
 }
 # Creating bucket
 resource "aws_s3_bucket" "website" {
